@@ -1,0 +1,73 @@
+@import '../../variables/styles.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  background-color: $black-200;
+  height: 100%;
+  background-image: url(https://b1.gmbox.ru/c/101056.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#root, .App {
+  height: 100%;
+  background-color: rgba($black-200, 0.3);
+  overflow: hidden;
+}
+
+.color-white {
+  color: white !important;
+}
+
+.bg-black-100 {
+  background-color: $black-100 !important;
+}
+
+.MuiMenu-paper {
+  background-color: $black-200 !important;
+}
+
+.page {
+  padding: 20px;
+  background-color: rgba($black-100, 0.8);
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px 0px #0000007d;
+}
+
+.body-content {
+  padding: 20px;
+  height: calc(100% - 120px);
+  overflow-y: auto;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.col-4 {
+  width: 25%;
+  padding: 10px;
+}
+
+.col-8 {
+  width: 65%;
+  padding: 10px;
+}

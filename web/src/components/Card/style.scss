@@ -1,0 +1,39 @@
+@import '../../variables/styles.scss';
+
+.card {
+  max-width: 100% !important;
+  background-color: #1f1e1e6b !important;
+  box-shadow: 0px 0px 15px 0px #000000b0 !important;
+
+  .MuiTypography-colorTextSecondary {
+    color: $orange;
+  }
+
+  .MuiIconButton-root {
+    color: white;
+  }
+
+  .rating {
+    padding-left: 5px;
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 40px 0px black !important;
+  }
+}
+
+.card-image {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+  }
+}
