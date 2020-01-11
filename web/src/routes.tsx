@@ -1,2 +1,6 @@
-export const MAIN_ROUTE = '/main';
-export const NEWS_ROUTE = '/news';
+export const routes = {
+  MAIN_ROUTE: '/main',
+  NEWS_ROUTE: '/news'
+};
+
+export const PROFILE_ROUTE = '/profile';

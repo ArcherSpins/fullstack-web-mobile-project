@@ -38,7 +38,7 @@ export default () => {
       <Navbar>
         <ListNavbar>
           {
-            Object.entries(routes).map((route: [string, string], i) => (
+            Object.entries(routes.routes).map((route: [string, string], i) => (
               <Li key={i}>
                 <Link to={route[1]}>{route[0].replace(/_\w+/, '')}</Link>
               </Li>
@@ -57,7 +57,9 @@ export default () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem className="color-white" onClick={handleClose}>Profile</MenuItem>
+            <MenuItem className="color-white" onClick={handleClose}>
+              <Link to={routes.PROFILE_ROUTE}>Profile</Link>
+            </MenuItem>
             <MenuItem className="color-white" onClick={handleClose}>My account</MenuItem>
           </Menu>
         </UserBlock>

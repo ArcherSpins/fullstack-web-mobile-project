@@ -7,6 +7,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
@@ -43,6 +45,16 @@ const useStyles = makeStyles(theme => ({
 export default function RecipeReviewCard() {
   const [expanded, setExpanded] = React.useState<boolean>(false);
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event: any) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const classes = useStyles();
 
   const handleExpandClick = () => {
@@ -58,9 +70,22 @@ export default function RecipeReviewCard() {
           </Avatar>
         }
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
+          <>
+            <IconButton aria-controls="settings-menu" aria-haspopup="true" onClick={handleClick} aria-label="settings">
+              <MoreVertIcon />
+            </IconButton>
+            <Menu
+              id="settings-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem className="color-white" onClick={handleClose}>Удалить</MenuItem>
+              <MenuItem className="color-white" onClick={handleClose}>Перейти</MenuItem>
+              <MenuItem className="color-white" onClick={handleClose}>Редактировать</MenuItem>
+            </Menu>
+          </>
         }
         className="color-white"
         title="Shrimp and Chorizo Paella"

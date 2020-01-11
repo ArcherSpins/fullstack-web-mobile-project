@@ -5,6 +5,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import Navbar from '../Navbar';
+import BGAnimation from '../BGAnimation';
 import * as routes from '../../routes';
 import * as pages from '../../pages';
 import './style.scss';
@@ -15,16 +16,22 @@ const App: React.FC = () => (
     <Switch>
       <Route
         exact
-        path={routes.MAIN_ROUTE}
+        path={routes.routes.MAIN_ROUTE}
         component={pages.Main}
       />
       <Route
         exact
-        path={routes.NEWS_ROUTE}
+        path={routes.routes.NEWS_ROUTE}
         component={pages.News}
       />
-      <Redirect to={routes.MAIN_ROUTE} />
+      <Route
+        exact
+        path={routes.PROFILE_ROUTE}
+        component={pages.Profile}
+      />
+      <Redirect to={routes.routes.MAIN_ROUTE} />
     </Switch>
+    <BGAnimation />
   </div>
 );
 

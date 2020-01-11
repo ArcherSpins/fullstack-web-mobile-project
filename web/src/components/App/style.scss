@@ -8,16 +8,20 @@
 }
 
 html, body {
-  background-color: $black-200;
+  background-color: rgba(0,0,0,0.3);
   height: 100%;
-  background-image: url(https://b1.gmbox.ru/c/101056.jpg);
+  // background-image: url(https://b1.gmbox.ru/c/101056.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 #root, .App {
   height: 100%;
-  background-color: rgba($black-200, 0.3);
   overflow: hidden;
 }
 
@@ -67,7 +71,27 @@ html, body {
   padding: 10px;
 }
 
+.col-3 {
+  width: 18%;
+  padding: 10px;
+}
+
 .col-8 {
   width: 65%;
   padding: 10px;
+}
+
+.col-9 {
+  width: 82%;
+  padding: 10px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
 }

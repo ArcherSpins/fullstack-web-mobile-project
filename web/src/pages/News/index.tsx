@@ -23,7 +23,7 @@ class NewsPage extends React.Component<{}, { isScrolling: boolean }> {
 
     return (
       <div className="body-content" onScroll={this.handlerScroll}>
-        <div className="page">
+        <div className="page container">
           <div className="d-flex justify-content-between">
             <div className="col-4" style={{ flex: 1, maxWidth: 400 }}>
               <div className={isScrolling ? 'fixed-filter' : ''}>
